@@ -70,6 +70,13 @@ RDMA operation.
 - **Pre-registered memory.** The whole protocol depends on the input buffer being RDMA-registered
   and large enough for both the incoming and outgoing rows.
 
+## Performance
+
+**Not benchmarked here.** The shuffle needs the course's distributed harness: two development VMs
+connected over soft-RDMA, the `CommHelper` connection layer, and a driver that starts both sides.
+The assignment explicitly warns against running it on a single machine, so no numbers are published
+for this project — anything measured without real RDMA would be meaningless.
+
 ## Files
 
 | Path | Contents |
